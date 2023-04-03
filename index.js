@@ -7,7 +7,7 @@ app.use(express.json());
 const port = process.env.port || 1000;
 let { MongoClient } = require("mongodb");
 
-const client = new MongoClient(process.env.url);
+const client = new MongoClient(process.env.DATABASE);
 let re, db, col;
 async function ged() {
   re = await client.connect();
